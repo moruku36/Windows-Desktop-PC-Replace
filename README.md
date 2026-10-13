@@ -1,113 +1,156 @@
-# Windows-Desktop-PC-Replace
-2027年4想定 自宅WindowsデスクトップPC オールリプレイス計画（GTA 6 PC版対応 / AMD CPU × NVIDIA GPU）
-# Windows Desktop PC Replace (2027年4月想定 オールリプレイス計画)
+# 🖥️ Windows Desktop PC Replace (2027年4 オールリプレイス計画)
 
-## 1. GTA 6 PC版の2027年第1四半期発売報道を受け、2027年4月をオールリプレイスの基時期に設定
+> [!IMPORTANT]
+> **結論（エグゼクティブサマリー）**
+> * **リプレイス目標時期**: **2027年4月**（『GTA 6』PC版の2027年Q1発売予測を受け、公要件と実測ベンチマークを確認して発注）
+> * **基本アーキテクチャ**: **AMD Ryzen (Socket AM5)** × **NVIDIA GeForce RTX 50シリーズ** ＋ **ATX 3.1 (12V-2x6) 電源**
+> * **大本命プラン**: **【中（竹）プラン】約47万〜62万円**（`Ryzen 7 9800X3D / 9850X3D` ＋ `RTX 5070 Ti / 5080 16GB` まは `RTX 50 SUPER 24GB` ＋ `DDR5 32〜64GB`）
 
-自宅のWindowsデスクトップPC（2020〜2021年頃自作・使用期間約5〜6年）のリプレイスは当初2027年〜2028年頃で検討していたが、PC GamerおよびTom's Hardwareの報道（2026年10月14日）にて、GamesBeatが複数の業界関係者証言として **『Grand Theft Auto VI（GTA 6）』PC版が2027年第1四半期（1月〜3月）に発売れる見通し** を報じた（Rockstar Games公式のンソール版発売日である2026年11月19日からわずか最大4ヶ月後）。
 
-この早期リリース予測を踏まえ、PC版の正式システム要件と発売直後の実測ベンチーク見極められる **2027年4月頃** をオールリプレイスの仮置き時期に設定する。
+---
 
-* **CPU方針**: **AMD Ryzen シリーズ**Socket AM5世代の3D V-Cache搭載モデル、または2027年登場見込みの次世代Zen 6「Olympic Ridge」）を採用
-* * **GPU方針**: **NVIDIA GeForce RTX シリーズ**（GeForce RTX 50シリーズ、また2027年初頭登場が噂されるRTX 50 SUPERシリーズを採用
-  * * **その他パーツ方針**: 特定ブランドのこだわりなし（冷却・静音性・ATX 3.1電の安全性・コストパフォーマンスを重視し、ツクモのPC立代行たはBTO/自作を比較）
-   
-    * ## 2. 現行Windows PCはAM4・RTX 3070（8GB）・SATA SSD構成のため、次世代環境へは全面刷新が合的
-   
-    * 2026年10月5日時点の実機診断で確認済みの現行機スックおよび電源構成は以下のとおり。
-   
-    * | 項目 | 現在の確認値（2026年10月時点） | 状態・リプレイス上の課題 |
-    * | :--- | :--- | :--- |
-    * | **OS** | Windows 11 Pro 64bit (Version 26H2 / Build 26300.9550) | 26H2のサポート期限は2028年10月で |
-    * | **CPU** | AMD Ryzen 7 5800X (8コア16スレド / TDP 105W) | Socket AM4・DDR4世代（内蔵GPUなし）。AM5移行には基板・RAMの同時刷新が必要 |
-    * | **GPU** | NVIDIA GeForce RTX 3070 (VRAM 8GB / 8192MiB) | 基準消費電力 220W（Driver 617.14）。最新重量級ゲームやAI同時利用ではVRAM 8GBがボトルネック |
-    * | **メモリ (RAM)** | DDR4 32GB (16GiB × 2枚 / 2667MHz表示) | 容量は32GB確保済みだがDDR4世代のため次期AM5機へは流用不可 |
-    * | **マザーボード** | ASRock X570 Steel Legend WiFi ax (BIOS P3.31) | ATX規格 / PCIe 4.0 x16 + x4構成 |
-    * | **ストレージ (SSD)** | Samsung 860 EVO 1TB (SATA SSD) | Cドライブ空き約478GB（Healthy）DirectStorage必須世代に向けてNVMe SSDへの移行が必要 |
-    * | **PCケース** | SAMA 黒鉄 KUROTETSU (型番: JAX-02) | 外寸 幅206×高さ470×奥行450mm（ATX対応・7スロット）。大型RTX 50系ードの16pin配線余地と冷却面から新ケースへの移行を推奨 |
-    * | **電源ユット (PSU)** | ATX電源（実機の型番・定格W・経年は現物確認対象） | RTX 3070 (220W) + Ryzen 7 5800X (105W) 構成を約5〜6年駆動。次期構成では **ATX 3.1 / 12V-2x6ネイティブ対応電源**（850W〜1200W）へ全面交換 |
-    * | **電源周辺・保護構成** | 壁コセント直接給電（100V 15A / 1500W上限） | 次期リプレイス時は高負荷時の消費電力増に備え、**正弦波出力UPS（自動シャットダウン対応）** の入を推奨 |
-   
-    * ## 3. GTA 6 PC版はVRAM 12〜16GB以上・32GB RAM・NVMe SSD・8コアX3D CPUが快適動作の基準と予測
-   
-    * Rockstar GamesからPC版の公式動作環境はまだ発表されていないが、PS5 / Xbox Series X|Sのハードウェア仕様および『GTA V Enhanced』の要求環境から、EnebaおよびFlowUPの予測スペック分析では以下の水準が見込まれている。
-   
-    * | ターゲット環境 | 予測CPU要件 | 予測GPU・VRAM件 | 予測メモリ (RAM) | 予測ストレージ |
-    * | :--- | :--- | :--- | :--- | :--- |
-    * | **最低動作 (1080p / 30〜40fps)** | Ryzen 5 3600 / 5600 クラス | RTX 3060 (12GB) クラス | 16GB RAM | 150〜200GB NVMe SSD |
-    * | **フHD推奨 (1080p / 60fps)** | Ryzen 5 7500F / 9600 クラス | RTX 5060 (8GB) / RTX 5060 Ti (16GB) | 16GB〜32GB RAM | 1TB NVMe SSD |
-    * | **WQHD推奨 (1440p / 60fps+)** | Ryzen 7 5800X / Ryzen 5 9600X〜Ryzen 7 9700X | RTX 4070 / RTX 5070 (12GB+ VRAM) | 32GB DDR5 RAM | 1TB〜2TB NVMe SSD (DirectStorage対応) |
-    * | **4K高画質・最高設定 (4K / 60fps+)** | **Ryzen 7 9800X3D / 9850X3D** | **RTX 5070 Ti (16GB) 〜 RTX 5080 (16GB)** | 32GB〜64GB DDR5 RAM | 2TB Gen4/Gen5 NVMe SSD |
-   
-    * * **群衆・交通AI処理によるCPU負荷**: 密度の高Vice CityのNPC車シミレーションによりCPU荷が高く、大容量L3キャッシュを備える **AMD Ryzen X3Dシリーズ** が最低フレムレート（1% low）の維持に有利。
-      * * **レイトレーシング常時適用とVRAM消費**: トレーラー分析からレイトレーシング・グローバルイルミネーション（RTGI）が標準の画基盤になており、WQHD〜4K環境やローカルAI併用を見据えると **VRAM 16GB以上** の確保が安全圏となる。
-       
-        * ## 4. 2027年4月想定 オールリプレイ構成案（小・中・大 3プラン比較）
-       
-        * CPUを **AMD（AM5）**、GPUを **NVIDIA（RTX 50シリーズ）** に固定し、2026年10月時点の自作PC予算別相場、50万円台BTO実売検証、およびツクモのパーツ参照価をもとに、2027年4月時点で選べる **小（梅）・中（竹）・大（松）** の3段階構成を定義する。
-       
-        * | プラン区分 | 想定予算（税込） | ターゲット解像度・用途 | CPU (AMD AM5) | GPU (NVIDIA) | メモリ (DDR5) | SSD (NVMe) | 電源構成 (ATX 3.1) |
-        * | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-        * | **【小（梅）】コスパ・WQHD構成** | **約30万〜36円** | フルHD最高〜WQHD (1440p) 60fps快適レ | Ryzen 5 9600 / 9600X (または Ryzen 7 9700X) | **GeForce RTX 5070 (12GB)** または **RTX 5060 Ti (16GB)** | 32GB (16GB×2) DDR5-5600/6000 | 1TB〜2TB Gen4 NVMe | 750W〜850W 80PLUS Gold (ATX 3.1) |
-        * | **【中（竹）】大本命・4K高画質AI両立構成** | **約47万〜62万円** | **【本命】** WQHD高fps〜4K高画 + ローカルAI常駐 | **Ryzen 7 9800X3D** または **Ryzen 7 9850X3D** | **GeForce RTX 5070 Ti (16GB)** または **RTX 5080 (16GB)** *(※24GB SUPERが出ば最優先)* | 32GB〜64GB DDR5-5600/6000 | 2TB Gen4 NVMe | 850W〜1000W 80PLUS Gold/Platinum (ATX 3.1) |
-        * | **【大（松）】最高峰4K妥協な＆大規模AI構成** | **100万148万円** | 4Kネイティブ最高設定・パストレ + 27B級LLM駆動 | **Ryzen 9 9950X3D** / **9950X3D2** (またはZen 6 X3D最上位) | **GeForce RTX 5090 (32GB)** | 64GB〜128GB DDR5-5600/6000 | 2TB〜4TB Gen4/Gen5 NVMe | 1200W 80PLUS Platinum (ATX 3.1) |
-       
-        * ### ① 【小（梅）プラン】約30万〜36万円：WQHD1440p）快適・AM5エントリー〜ミドル構
-       
-        * GTA 6の推奨スペック予測（1080p〜1440p / 60fps）をクアつつ、を30万円台前半にえる構成。AMDが2029年でのサポートを表明しているSocket AM5で組むことで、数年後に次世代Zen 6 X3DへCPUのみを載せ替える拡張性を確保する。
-       
-        * * **CPU**: AMD Ryzen 5 9600（実売約3.3万）または Ryzen 7 9700X
-          * * **GPU**: NVIDIA GeForce RTX 5070 12GB（単体最安約14.5万）または VRAM 16GBを安価に確保するなら RTX 5060 Ti 16GB（単体最安約12.0万円）
-            * * **マザーボード**: AMD B850 チップセット載モデル（ASRock B850M Rock WiFi等 1.6万〜2.5万円）
-              * * **メモリ**: DDR5-5600 32GB (16GB×2枚)（実売約6.0万円）
-                * * **ストレージ**: 1TB〜2TB PCIe Gen4 NVMe SSD（Kingston NV3 1TB 約2.8万円 / 2TB 約4.5万〜5.4万円）
-                  * * **電源構成**: 750W〜850W 80PLUS Gold ATX 3.1対応電源（玄人志向 KRPW-GS850W/90+ 約0.9万円 / Corsair RM850e 2025 約1.5万円）
-                    * * **ケース・冷却**: エアフロー型ミドルタワーケース（約0.5万〜1.0万円）＋空冷クーラー（付属または約0.4万円）
-                      * * **予算感目安**: 自作パーツ合計で **約30万〜33万円**（OS・BTO組立込みで **約32万〜36万円**）。GPUをMSI GeForce RTX 5070 Ti 16G VENTUS 3X OC（最約21.0万〜23.1万円）へ引き上た場合は **約36万〜40万円**
-                       
-                        * ### ② 【中（竹）プラン】約47万〜62万円4K高画質＆ローカルAI常駐の大本命構成
-                       
-                        * GTA 6をWQHD高フレームレート〜4K高画質（DLSS 4マルチフレーム生成併用で100fps超）で快適に遊びつつ、ローカルAIエージェント常駐や開発作業もストレスなく両立する **コストと性能のバランスが最も優れた本命プラン**。
-                       
-                        * * **CPU**: **AMD Ryzen 7 9800X3D**（実売最安5.6万円）または **AMD Ryzen 7 9850X3D**（実売約7.2万〜7.8万円）
-                          *   * *選定基準*: 単体パーツでは9800X3Dが約1.6万円安く（ゲーム性能差は約3.2%）、コパ最良。一方ドスパラ等のBTO完成品（GALLERIA XDR7A-R58-GD）では9800X3D版（494,980円）と9850X3D版（495,980円）の差が1,000円しかないため、購入形態に応じて選択する。また2027年4月時点で **Zen 6 X3D（Olympic Ridge** が発売済みであればそちらを比較対象に加る。
-                              * * **GPU**: **NVIDIA GeForce RTX 5070 Ti 16GB**（単体約21.0万〜23.1万円 / 300W）または **NVIDIA GeForce RTX 5080 16GB**（単体約26.8〜34.3万円 / 360W）
-                                *   * *選定基準*: どらもVRAMは16GB GDDR7。価格と扱いやすさ重視ならRTX 5070 Ti、4Kネイティブでのフレムレート（+15〜20%）とパストレーング性能重視ならRTX 5080。
-                                    *   * *2027年の最重要チェク点*: CES 2027（2027年1月）での発表が噂されている **RTX 5070 Ti SUPER (24GB)** / **RTX 5080 SUPER (24GB)** 2027年4月時点で流通していれば、ゲーム＋ローカルLLM常駐の双方で24GB VRAMモデルがベストバイとなる。
-                                        * * **マザーボード**: MSI B850 TOMAHAWK MAX WIFI（約3.6万円）または ASUS TUF GAMING B850-PLUS WIFI
-                                          * * **メモリ**:
-                                            *   * ゲーム主体＋軽量AI構成: **DDR5-6000 32GB (16GB×2)**（約6.0万〜7.0万円）
-                                                *   * 開発・WSL2・ローカAI余裕構成: **Crucial DDR5 64GB (32GB×2)**（約14.0万円）
-                                                    * * **ストレージ**: **Lexar NM790 2TB NVMe SSD**（約5.4万円）
-                                                      * * **電源構成**: **Antec GSK1000 ATX 3.1 1000W (80PLUS Gold)**（約1.8万円）または Seasonic FOCUS GX-850 V4 / Corsair RM1000xATX 3.1 / 12V-2x6ネイティ対応）
-                                                        * * **冷・ケース**: デュアルタワー空冷または240mm/360mm簡易水冷（約1.0万〜1.5万円）＋16pinケーブルの曲げ余裕が確保できる新型ATXミドルタワーケース（約1.0万〜1.8万円）
-                                                          * * **予算感の目安**:
-                                                            *   * **32GB RAM + RTX 5080 + 9800X3D/9850X3D（自作・BTO標準）**: **約47.0万〜54.8万円**
-                                                                *   * **64GB RAM + RTX 5070 Ti + 9850X3D + 2TB SSD（ツクモ組立代行・OS込み積算）**: **約61.8万円**（同条件でGPURTX 5080に変更した場合は **約68.2万〜73.0万円**）
-                                                                 
-                                                                    * ### ③ 【大（松）プラン】約100万〜148万円：RTX 5090（32GB）搭載・最高峰フラッグシップ構成
-                                                                 
-                                                                    * 4Kネイティブ最高定・フルパストレーシングでのGTA 6レイに加え、32GBの大容量VRAMを活かして27BクラのローカルLLMや動画生成AI（Wan 2.2等）までローカル1台でし切る限構成。
-                                                                 
-                                                                    * * **CPU**: **AMD Ryzen 9 9950X3D**（16コア32スレッド / 実売最安約10.4万円）または **AMD Ryzen 9 9950X3D2 Dual Edition**（16.9万円）/ 2027年登場見込みの **Zen 6 Ryzen 9 X3D**
-                                                                      * * **GPU**: **NVIDIA GeForce RTX 5090 32GB GDDR7**（準消費電力 575W / GIGABYTE WINDFORCE OC参照価格 699,800円〜通実売最安約94万円）
-                                                                        * * **マザーボード**: AMD X870E / X870 または位B850ザーボード約4.5万〜7.0万円）
-                                                                          * * **メモリ**: **Crucial DDR5 64GB (32GB×2)**（約14.0万円）〜 **Crucial DDR5 128GB (64GB×2)**（約34.8万円）
-                                                                            * * **ストレージ**: 2TB NVMe SSD × 2枚（計4TB / 約10.8万円）
-                                                                              * * **冷却・ケース**: 360mm簡易水冷クーラー（ARCTIC Liquid Freezer III Pro 360等 約1.5万〜3.0万円）＋大型高エアフローケース（カード長342mm・厚み65mm級よび16pinケーブルの側板干渉をぐ幅広ケース）
-                                                                                * * **電源構成**: **1200W 80PLUS Platinum / Titanium ATX 3.1電源**（約3.5万〜5.0万円）
-                                                                                  *   * *電源・設置上の注意*: RTX 5090（575W）Ryzen 9（170W〜）の高負荷時はPC単体800W前後に達するため、壁コンセント1路（100V 15A＝1500W）の他機器（エアコン・暖房・モター等との兼ね合いを確認し、1000Wクラス以上の高力正波UPSを組み合わせる。
-                                                                                      * * **予算感の目安**:
-                                                                                        *   * **64GB RAM + 9850X3D/9950X3D + RTX 5090（BTO/自作積算）**: **約100万〜120万円**（サイコムBTO構成例99.5万円、パソコン工完成品で約119.8万円、ツクモ64GB積算で約109.9万円）
-                                                                                            *   * **128GB RAM + 9950X3D2 + RTX 5090 + 4TB SSD（上限比較積算）**: **約148.4万円**
-                                                                                             
-                                                                                                * ## 5. 2027年4月の発注に向けたローマップ
-                                                                                             
-                                                                                                * 1. **2026年11月（コンソール版発売＆決算発表の確認）**
-                                                                                                  2.    * 2026年11月9日のTake-Two四半期決算および11月19日のPS5/Xbox版『GTA 6』発売後、PC版の正式アナウンスや実機グラフィック負荷（Digital Foundry等の解析を確認する。
-                                                                                                        * 2. **2027年1月〜2月（CES 2027 新世代パーツとPC版続報の確認）**
-                                                                                                          3.    * CES 2027にて **AMD Zen 6（Olympic Ridge** および **NVIDIA GeForce RTX 50 SUPERシリーズ（RTX 5070 Ti SUPER 24GB / RTX 5080 SUPER 24GB）** が発表・発売されるかを確認する。
-                                                                                                                *    * Rockstar GamesからPC版の正式売日および公式システム要件が発表された場合、目標解像度（WQHDか4Kか）照らして【中（竹）プラン】のGPU（5070 Ti / 5080 / 50 SUPER）を確定する。
-                                                                                                                     * 3. **2027年3月〜4相見積もり・発注・並行移行）**
-                                                                                                                       4.    * 現行機（Ryzen 7 5800X + RTX 3070 + SAMA 黒鉄 JAX-02）はケース流用せずそのま稼働状態で残し、新ケースで新PCを組むことでダウンタイムゼロの並行移行（1〜2週間の動作検証期間）を確保する。
-                                                                                                                             *    * ツクモパソコン本店、ドスパラ、フロンティア、サイコムで同条件の見積もりを比較し、発注する。
+## 📂 ドキュメント階層構成（目次）
+
+本リポジトリは、トップペジ（本フイル）で全体・比較グラフ・早見表を示し、各テーマの掘り下げを `docs/` 配下に階層化して管理しています。
+
+| ドキュメント | 内容・スコープ |
+| :--- | :--- |
+| **[`README.md`](./README.md)** | **全体ダッシュボード**（3プラン比較表・視覚グラフ・電源構成図・参考URL一覧） |
+| **[`docs/01-current-pc-and-power.md`](./docs/01-current-pc-and-power.md)** | **現行Windows PC構成・電源構成**（2026年10月時点の実機診断値・ボトルネック分析・PSU/UPS設計） |
+| **[`docs/02-gta6-pc-specs-analysis.md`](./docs/02-gta6-pc-specs-analysis.md)** | **GTA 6 PC版 発売時期＆要求スペック分析**（2027年Q1発売説の根と解像度別ターゲット要件） |
+| **[`docs/03-build-plans-2027-04.md`](./docs/03-build-plans-2027-04.md)** | **2027年4月 予算別構成案（小・・大）**（パーツ別内訳・価格積算・RTX 50 SUPER / Zen 6 動向） |
+| **[`docs/04-roadmap-and-checklist.md`](./docs/04-roadmap-and-checklist.md)** | **移行ロードマップ＆店頭相談チェックリスト**（2026年11月〜2027年4月の行動計画・並行移行手順） |
+
+---
+
+## 📊 1. 現行機 vs 2027年4月リプレイス構成（小・中・大）早見表
+
+CPUを **AMD（Socket AM5）**、GPUを **NVIDIA（GeForce RTX 50系）** に固定した場合の現行機との比較一覧です
+
+| 比較項目 | 🔹 現行機 (2020-2021年頃〜) | 🟢 【小（梅）】コスパ・WQHD構成 | 🟡 【中（竹）本命・4K＆AI両立 | 🔴 【大（松）】最高峰・ンスター構成 |
+| :--- | :--- | :--- | :--- | :--- |
+| **想定予算 (税込)** | 保持のみ | **約30万〜36万円** | **約47万〜62万円 ⭐本命** | **約100〜148万円** |
+| **ターゲット用途** | フHD中画質 / 軽作業 | フルHD最高〜WQHD (1440p) 60fps+ | **WQHD高fps〜4K 60fps+ & AI常駐** | 4Kパストレ最高設定 & 27B級LLM |
+| **CPU (AMD)** | Ryzen 7 5800X (8C/16T, AM4) | Ryzen 5 9600 / Ryzen 7 9700X | **Ryzen 7 9800X3D / 9850X3D** *(※Zen 6 X3D比較)* | **Ryzen 9 9950X3D / 9950X3D2** |
+| **GPU (NVIDIA)** | GeForce RTX 3070 (**8GB**) | **RTX 5070 (12GB)** / 5060 Ti (16GB) | **RTX 5070 Ti (16GB)** / **RTX 5080 (16GB)** *(※24GB SUPER注目)* | **GeForce RTX 5090 (32GB)** |
+| **メリ (RAM)** | DDR4 32GB (16GB×2) | DDR5 32GB (16GB×2) | **DDR5 32GB〜64GB (32GB×2)** | **DDR5 64GB〜128GB (64GB×2)** |
+| **SSD** | 1TB SATA SSD (860 EVO) | 1TB〜2TB Gen4 NVMe | **2TB Gen4 NVMe** (DirectStorage対) | **4TB (2TB×2) Gen4/Gen5 NVMe** |
+| **電源ユニット** | 既存ATX電 (型番未確認) | 750W〜850W Gold (ATX 3.1) | **850W〜1000W Gold/Platinum (ATX 3.1)** | **1200W Platinum/Titanium (ATX 3.1)** |
+
+---
+
+## 📈 2. 視覚グラフで見る予算・性能・VRAMバランス
+
+### (1) プラン別の想定予算・VRAM容量・4Kゲーム性能イメージ
+
+```
+【想定予算の目安（万円）】
+  現機維持  | █ 0〜3万円（検・バックアップのみ）
+  🟢 小（梅） | ██████████ 30〜36万円（WQHD快適・AM5入門）
+  🟡 中（竹） | █████████████████ 47〜62万円（★4K高画質＆ローカルAI両立のイートスポット）
+  🔴 大（松） | ███████████████████████████████████ 100〜148万円（RTX 5090 32GB特化）
+
+【GPU VRAM容量の比較（GB）】※GTA 6 高画質＆ローカルLLM駐の境界線は 16GB〜24GB
+  RTX 3070 (現行)     | ███████ 8GB   (⚠️ WQHD以上・AI同時利用で不足)
+  RTX 5070 (小プン) | ████████████ 12GB  (⭕ フルHD〜WQHD標準)
+  RTX 5070 Ti / 5080  | ███████████████ 16GB  (✅ 4Kゲム軽量〜中量AIの実用ライン)
+  RTX 50 SUPER (噂)   | ███████████████████████ 24GB  (🌟 2027年春に出れば中プランの最有力)
+  RTX 5090 (大プラン) | ███████████████████████████████ 32GB  (👑 27B級LLM・画生成AIまで裕)
+```
+
+### (2) GPU別の想定予算（BTO/自作総額）とWQHD/4Kームレート比較（Mermaidチャート）
+
+```mermaid
+xychart-beta
+    title "構成プラン別の概算予算（万円）と重量級ゲーム平均fps（WQHD / 4K）"
+    x-axis ["現行(RTX 3070)", "小: RTX 5060Ti 16G", "小: RTX 5070", "中: RTX 5070Ti", "中: RTX 5080", "大: RTX 5090"]
+    y-axis "数値（万円 / fps）" 0 --> 150
+    bar [0, 31, 35, 48, 55, 115]
+    line [60, 73, 96, 117, 128, 148]
+    line [25, 40, 54, 69, 77, 105]
+```
+> * **棒グラフ（bar）**: 本体一式の概算予（万円）
+> * **上段れ線**: WQHD（1440p）最高画質の平均fps安
+> * **下段れ線**: 4K（2160p）最高画質の平均fps目安（DLSSマルチフレーム生成オフ時）
+
+
+---
+
+## ⚡ 3. 電源構成・ハードウェア刷新アーキテクチ
+
+5〜6年使用した現行機（AM4 + SATA SSD + 旧規格電源）から、2027年4月の次期環境（AM5 + ATX 3.1電源 + UPS保護）へ刷新イメージです。
+
+```mermaid
+flowchart LR
+    subgraph Power["🔌 電源・保護ライン（100V 15A回路 / 上限1500W）"]
+        Wall["壁コンセント\n(100V / 15A)"] --> UPS["正弦波出力 UPS\n(瞬断・停電保護 / 自動停止)"]
+        UPS --> PSU["ATX 3.1 / PCIe 5.1 電源\n(850W〜1200W Gold/Platinum)"]
+    end
+
+    subgraph NextPC["🖥️ 次期メインPC（2027年4月 新規構築）"]
+        PSU -- "12V-2x6 (16pin)\n曲げ余裕35mm以上確保" --> GPU["NVIDIA GeForce RTX 50系\n(5070Ti / 5080 / 5080 SUPER)"]
+        PSU -- "EPS 8pin×2 / ATX 24pin" --> MB["AMD B850 / X870 マザーボード\n(Socket AM5 / 2029年まで継続)"]
+        MB --> CPU["AMD Ryzen 7 9800X3D / 9850X3D\n(または 世代 Zen 6 X3D)"]
+        MB --> RAM["DDR5-6000 32GB〜64GB\n(2組デュアルチャネル)"]
+        MB --> SSD["PCIe Gen4/Gen5 NVMe SSD 2TB\n(DirectStorage対)"]
+    end
+
+    subgraph OldPC["📦 行PC（SAMA 黒鉄 JAX-02 / 並行移行・予備AI機）"]
+        OldSpec["Ryzen 7 5800X + RTX 3070 8GB\nDDR4 32GB + Samsung 860 EVO 1TB"]
+    end
+
+    OldPC -. "ケース流用せずそのまま残し\nダウンタイムゼロでデータ・AI環境を並行移行" .-> NextPC
+```
+
+---
+
+## 🗓️ 4. 2027年4月リプレイスに向けたスケジュール（Ganttチャート）
+
+```mermaid
+gantt
+    title Windows Desktop PC オールリプレイス画タイムライン
+    dateFormat  YYYY-MM-DD
+    axisFormat  %Y/%m
+
+    section 1. 現機保全・情報収集
+    現行機バックアップ・PSU/ケース現確認           :done,    p1, 2026-10-01, 2026-11-08
+    Take-Two決算(11/9) & GTA6 CS版発売(11/19)確認 :active,  p2, 2026-11-09, 2026-12-15
+
+    section 2. 新世代パーツ見極め
+    CES 2027 (Zen 6 / RTX 50 SUPER 24GB 発表確認)  :         p3, 2027-01-01, 2027-01-31
+    GTA 6 PC版 正式発売日・公式要求スック確認      :         p4, 2027-01-15, 2027-03-15
+
+    section 3. 見積・発注・移
+    ツクモ・ドスパラ・サイコム等で相見積もり取得     :         p5, 2027-03-15, 2027-04-05
+    新PC発注・納品・1〜2週間の並作検証          :crit,    p6, 2027-04-05, 2027-04-30
+```
+
+---
+
+## 🔗 5. 参考記事・パーツ相場・BTOショップ URL一覧
+
+リプレイス判断およびパーツ選定で参照している主要情報源のリンク集です。
+
+### 📰 GTA 6 PC版 発売時期・要求スペック予測
+| カテゴリ | タイトル・情報源 | 確認ポイント |
+| :--- | :--- | :--- |
+| **発売時期報道** | [PC Gamer: Report claims Grand Theft Auto 6 will launch on PC sooner than anyone expected](https://www.pcgamer.com/games/grand-theft-auto/report-claims-grand-theft-auto-6-will-launch-on-pc-sooner-than-anyone-expected/) | GamesBeatによる「2027年1〜3月（Q1）PC版発売」リーク報道（2026/10/14） |
+| **発売時期報道** | [Tom's Hardware: GTA 6 could come to PC as early as Q1 2027, report claims](https://www.tomshardware.com/video-games/pc-gaming/gta-6-could-come-to-pc-as-early-as-q1-2027-leak-claims-january-march-launch-window-a-huge-improvement-over-18-month-gta-v-wait) | コンソール版（2026/11/19）から最短4ヶ月でのPC版投入測と背景分析 |
+| **要求スペック予測** | [Eneba: GTA 6 System Requirements: Can Your PC Run It?](https://www.eneba.com/hub/games/game-guides/gta-6-system-requirements/) | 最低（RTX 3060）・推奨（RTX 4070 / 5800X）・4K UltraRTX 5080 / 9800X3D）の3段階予測 |
+| **解像度別予測** | [FlowUP: GTA 6 PC: release date and system requirements (2026)](https://www.flowup.shop/en_GB/blog/jeux-9/gta-6-pc-release-date-and-system-requirements-291) | 1080p（RTX 5060）・1440pRTX 5070）・4K（RTX 5080 + 9800X3D）の構目安 |
+
+### 🛠️ CPU / GPU 世代比較・算別ビルド相場（2026年10月時点）
+| テゴリ | タイトル・情報源 | 確認ポイント |
+| :--- | :--- | :--- |
+| **CPU世代比較** | [ゲーミンスタイル: Nova Lake vs Zen 6、待つべきか今AM5か｜2027年のBFC対X3Dを乗換えコストで比較](https://gaming-st.com/cpu/nova-lake-vs-zen6-wait-or-buy-am5-2026-10/) | AM5の2029年サポート継続方針と、2027年のZen 6（Olympic Ridge）への乗換え判断 |
+| **50万円台本命検証** | [ゲーミングPCガイド: 50万円台のおすすめゲーミングPC｜本命はRTX 5080＋9850X3D](https://gamepc-guide.com/articles/gaming-pc-500000/) | RTX 5080 + Ryzen 7 9800X3D / 9850X3D 搭載BTOの実売価格（49.5万〜54.8万円と4K実測fps |
+| **GPU・AI用途比較** | [テコタク: RTX 5070 Ti/5080/5090どれを買う？用途別＋Super待つべき](https://techotakulab.com/rtx-5070ti-5080-5090-buy-guide-2026/) | 16GB VRAM（5070Ti/5080）と32GB（5090）の価格差、CES 2027のRTX 50 SUPER（24GB）予測 |
+
+### 🛒 組立代行BTOショップ現行パーツ公式仕様
+| ョップ / メーカー | リンク | 用途・チェック対象 |
+| :--- | :--- | :--- |
+| **TSUKUMO（ツクモ）** | [ツクモ公式通販サイト](https://shop.tsukumo.co.jp/) / [ナイトセール](https://shop.tsukumo.co.jp/features/night_sale/) / [G-GEAR 9800X3D+RTX5080構成例](https://shop.tsukumo.co.jp/goods/0409090978013/) | パーツ単体価格の基準・G-GEAR完成品（9850X3D+RTX5080+32GB+2TBで約55万円）・組立代行相談 |
+| **FRONTIER（フロンティア** | [GeForce RTX 50シリーズ搭載デル特集](https://www.frontier-direct.jp/direct/e/ejRtx50/) | セール時のハイエンドBTO価格比較（RTX 5070 / 5070 Ti / 5080 / 5090搭載機） |
+| **Sycom（サイコム）** | [サイコム BTO公式](https://www.sycom.co.jp/) | マザーボード・電源・空冷/水冷クーラーの番指定カスタム見積り |
+| **パソコン工房** | [GeForce RTX 5070 Ti 特集・価格比較](https://www.pc-koubou.jp/pc/geforce_rtx_5070ti.php) | RTX 5070 Ti 単体パーツおよびBTO相場確認 |
+| **ASRock（現行基板）** | [ASRock X570 Steel Legend 公式仕様](https://www.asrock.com/mb/AMD/X570%20Steel%20Legend/index.jp.asp) | 現行機のマザーボード仕様（AM4 / DDR4 / PCIe 4.0スロット構成） |
