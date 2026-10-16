@@ -20,6 +20,7 @@
 | **[`docs/02-gta6-pc-specs-analysis.md`](./docs/02-gta6-pc-specs-analysis.md)** | **GTA 6 PC版 発売時期＆要求スペック分析**（2027年Q1発売説の根と解像度別ターゲット要件） |
 | **[`docs/03-build-plans-2027-04.md`](./docs/03-build-plans-2027-04.md)** | **2027年4月 予算別構成案（小・・大）**（パーツ別内訳・価格積算・RTX 50 SUPER / Zen 6 動向） |
 | **[`docs/04-roadmap-and-checklist.md`](./docs/04-roadmap-and-checklist.md)** | **移行ロードマップ＆店頭相談チェックリスト**（2026年11月〜2027年4月の行動計画・並行移行手順） |
+| **[`docs/05-prebuilt-bto-vs-diy.md`](./docs/05-prebuilt-bto-vs-diy.md)** | **完成品・BTO購入案（非自作）**：購入形態別メリット/デメリット、2027年向け同等構成、販売元比較、保証・拡張性、相見積もりテンプレート |
 
 ---
 
