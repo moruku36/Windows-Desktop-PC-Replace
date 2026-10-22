@@ -1,0 +1,9 @@
+{
+  "name": "windows-desktop-pc-replace-diagrams",
+  "private": true,
+  "type": "module",
+  "description": "Mermaid -> SVG regeneration for docs/diagrams (uses the published 'pele' package; version must be pinned, see docs/diagrams/README.md)",
+  "scripts": {
+    "diagrams": "node scripts/render-diagrams.mjs"
+  }
+}
