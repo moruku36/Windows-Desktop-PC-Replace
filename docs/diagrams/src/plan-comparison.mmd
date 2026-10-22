@@ -1,0 +1,10 @@
+flowchart TB
+    start["現行: Ryzen 7 5800X / RTX 3070 8GB<br/>(文書上の情報・実機未確認)"]
+    start --> small["小: 9800X3D + RTX 5070 Ti 16GB<br/>RAM 32〜64GB / 約52〜58万円"]
+    start --> mid["中: 9850X3D + RTX 5080 16GB<br/>RAM 64GB / 約67万円"]
+    start --> large["大: 9950X3D + RTX 5090 32GB<br/>RAM 64GB / 約158万円(非推奨)"]
+    start --> stage["段階購入C: 新基盤 + 3070で先行<br/>GPUは公式PC要件の確認後 / 約30〜37万円"]
+    small --> rec["現時点の推奨: 小 + 3070は旧PCに残す(B)"]
+    stage --> rec2["PC版の公式情報が出ない/GPU高騰時の保険"]
+    mid --> note["VRAMは5070 Tiと同じ16GB<br/>差額は主にゲーム性能向け"]
+    large --> warn["価格・在庫・電源・設置電力の制約が大きい"]

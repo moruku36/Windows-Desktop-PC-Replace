@@ -1,0 +1,11 @@
+flowchart LR
+    subgraph NEW["新PC案A: 2GPU同居(独立運用)"]
+        CPU["Ryzen 9000 CPU"] -- "PCIe 5.0 x16<br/>(CPU直結)" --> G1["新GPU (RTX 5070 Ti 等)<br/>役割: ゲーム・主力AI"]
+        CPU --> CH["チップセット (B850等)"]
+        CH -- "PCIe 4.0 x4<br/>(チップセット経由)" --> G2["RTX 3070 8GB<br/>役割: 軽量AI・補助"]
+    end
+    subgraph OLD["案B: 旧PCに3070を残す"]
+        OPC["旧PC (5800X)"] --> G3["RTX 3070 8GB<br/>役割: AI用の別マシン"]
+    end
+    PSU["電源: 2GPU+CPU+余裕から再計算<br/>(単GPU推奨値の流用は不可)"] -.-> NEW
+    NOTE["SLI/NVLink・VRAM合算・fps倍増は前提にしない<br/>LLM分散はソフト対応/PCIe/異種GPUに依存"] -.-> NEW
